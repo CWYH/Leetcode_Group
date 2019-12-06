@@ -71,4 +71,6 @@
   ```
   
   
-
+### Medium
+#### 284. Peeking Iterator* -- Medium
+只用Iterator这个类，不要用其他的数据结构。
