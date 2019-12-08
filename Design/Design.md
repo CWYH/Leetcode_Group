@@ -74,3 +74,7 @@
 ### Medium
 #### 284. Peeking Iterator* -- Medium
 只用Iterator这个类，不要用其他的数据结构。
+
+#### 355. Design Twitter******* -- Medium
+OOP + k个排序链表合并问题
+https://leetcode-cn.com/problems/design-twitter/solution/mian-xiang-dui-xiang-she-ji-he-bing-k-ge-you-xu-li/

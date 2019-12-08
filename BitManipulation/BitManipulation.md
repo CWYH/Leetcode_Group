@@ -16,6 +16,13 @@ class Solution {
 }
 ``` 
 
+#### 476. Number Complement
+给定正整数$n$, 我们要找到$k$满足：
+$$
+2^k \le n < 2^{k+1}
+$$
+这样，结果就是$2^{k+1}-1-n$.
+
 ### Medium
 #### 260. Single Number III ***** -- Medium
 利用异或运算，两次遍历，时间复杂度$O(N)$.
