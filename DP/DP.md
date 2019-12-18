@@ -86,6 +86,125 @@ $$
 ### 313. Super Ugly Number -- Meidum
 和264题一样，不过要注意去重
 
+### 368. Largest Divisible Subset***** -- Medium
+对于已排好序的nums, 设两个数组：
+`dp[i]`: 以nums[i]为结尾的序列最大长度；
+`last[i]`: 在最大序列中 nums[i]的上一个元素在nums出现的下标.
+状态转移方程：
+```java
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < i; j++) {
+        if (nums[i] % nums[j] == 0 && dp[i] <= dp[j]) {
+            dp[i] = dp[j] + 1;
+            last[i] = j;
+        }
+    }
+    if (dp[i] > maxSize) {
+        maxSize = dp[i];
+        end = i;
+    }
+}
+```
+
+### 376. Wiggle Subsequence* -- Medium
+动态规划
+#### 1. 基本思路
+为了更好地理解这一方法，用两个数组来dp，分别记作up和down。
+
+每当我们选择一个元素作为摆动序列的一部分时，这个元素要么是上升的，要么是下降的，这取决于前一个元素的大小。
+
+up[i]存的是目前为止最长的以第i个元素结尾的上升摆动序列的长度。
+类似地， down[i]记录的是目前为止最长的以第i个元素结尾的下降摆动序列的长度。
+
+我们每当找到将第i个元素作为上升摆动序列的尾部的时候就更新 up[i] 。现在我们考虑如何更新 up[i]，我们需要考虑前面所有的降序结尾摆动序列，也就是找到 down[j] ，满足$j<i$ 且 $nums[i]>nums[j]$ 。类似的， down[i]也会被更新。
+```java
+class Solution {
+    public int wiggleMaxLength(int[] nums) {
+        final int N = nums.length;
+        if (N <= 1) return N;
+        int[] up = new int[N];     // 目前为止最长的以第i个元素结尾的上升摆动序列的长度
+        int[] down = new int[N];   // 目前为止最长的以第i个元素结尾的下降摆动序列的长度
+        for (int i = 1; i < N; i++) {
+            for (int j = 0; j < i; j++) {
+                if (nums[i] > nums[j]) {
+                    up[i] = Math.max(up[i], down[j] + 1);
+                } else if (nums[i] < nums[j]) {
+                    down[i] = Math.max(down[i], up[j] + 1);
+                }
+            }
+        }
+        return 1 + Math.max(up[N - 1], down[N - 1]);
+    }
+}
+```
+#### 2. 优化时间复杂度 -- 线性动态规划
+数组中的任何元素都对应下面三种可能状态中的一种：
+1. 上升的过程，$nums[i] > nums[i-1]$
+2. 下降的过程，$nums[i] < nums[i - 1]$
+3. 相同的位置，$nums[i] == nums[i - 1]$
+
+则动态规划状态转移方程为：
+1. 上升过程
+$$
+up[i] = down[i - 1] + 1 \\
+down[i] = down[i - 1]
+$$
+2. 下降过程
+$$
+up[i] = up[i - 1] \\
+down[i] = up[i - 1] + 1
+$$
+3. 相同位置
+$$
+up[i] = up[i - 1] \\
+down[i] = down[i - 1]
+$$
+
+```java
+    public int wiggleMaxLength(int[] nums) {
+        final int N = nums.length;
+        if (N <= 1) return N;
+        int[] up = new int[N];    
+        int[] down = new int[N];  
+        for (int i = 1; i < N; i++) {
+            if (nums[i - 1] < nums[i]) {
+                up[i] = down[i - 1] + 1;
+                down[i] = down[i - 1];
+            } else if (nums[i - 1] > nums[i]) {
+                up[i] = up[i - 1];
+                down[i] = up[i - 1] + 1;
+            } else {
+                up[i] = up[i - 1];
+                down[i] = down[i - 1];
+            }
+        }
+        return 1 + Math.max(up[N - 1], down[N - 1]);
+    }
+```
+
+#### 3. 进一步优化2的空间复杂度
+```java
+    /**
+     * 优化空间复杂度的线性动态规划
+     */ 
+    public int wiggleMaxLength(int[] nums) {
+        final int N = nums.length;
+        if (N <= 1) return N;
+        int up = 0;
+        int down = 0;
+        for (int i = 1; i < N; i++) {
+            if (nums[i - 1] < nums[i]) {
+                up = down + 1;
+            } else if (nums[i - 1] > nums[i]) {
+                down = up + 1;
+            }
+        }
+        return 1 + Math.max(up, down);
+    }
+```
+
+
+
 
 ## Hard
 ### 85. Maximal Rectangle -- Hard
