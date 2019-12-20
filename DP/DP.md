@@ -203,7 +203,11 @@ $$
     }
 ```
 
-
+### 377. Combination Sum IV
+$$
+dp[n] = dp[n - nums[0]] + dp[n - nums[1]] + \cdots
+$$
+如果存在$n == nums[k]$ dp[n]++
 
 
 ## Hard
