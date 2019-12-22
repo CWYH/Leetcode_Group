@@ -4,6 +4,37 @@
 
 ### Medium
 
+#### 89. Gray Code
+方法1. Gray码的镜像构造
+```java
+    public List<Integer> grayCode(int n) {
+        if (n < 0) return new ArrayList<>();
+        if (n == 0) return Arrays.asList(0);
+        if (n == 1) return Arrays.asList(0, 1);
+        ArrayList<Integer> res = new ArrayList<>();
+        res.add(0); res.add(1);
+        int number = 2;
+        for (int i = 2; i <= n; i++) {
+            for (int j = number - 1; j >= 0; j--) {
+                res.add(res.get(j) + number);
+            }
+            number <<= 1;
+        }
+        return res;
+    }
+```
+方法2. 位运算
+```java
+    public static List<Integer> grayCode(int n) {
+        List<Integer> res = new ArrayList<>();
+        int size = 1 << n;  // 2^n
+        for (int i = 0; i != size; i++) {
+            res.add(i ^ (i >> 1));
+        }
+        return res;
+    }
+```
+
 #### 365. Water and Jug Problem -- Medium
 
 The total water in the two jugs must be a multiple of GCD(x, y).
