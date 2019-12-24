@@ -1,0 +1,11 @@
+*.aux
+*.bbl
+*.loa
+*.lof
+*.lot
+*.nlo
+*.out
+*.toc
+
+.vscode
+.idea
