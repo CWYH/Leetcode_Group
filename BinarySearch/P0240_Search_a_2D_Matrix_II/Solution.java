@@ -1,5 +1,5 @@
 /**
- * 240. Search a 2D Matrix -- Medium
+ * 240. Search a 2D Matrix II -- Medium
  * 
  * Binary Search
  * 
