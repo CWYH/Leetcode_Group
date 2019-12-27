@@ -49,6 +49,9 @@ BST的根节点比其左子树的最大值大，比右子树的最小值小。
 * 3. 底边界 -- 通过先序遍历，保留叶子结点
 * 4. 右边界
 
+#### 450. Delete Node in BST -- Medium
+删除节点，一次性写对感觉还蛮难的。
+
 ### Hard 
 #### 99. Recover Binary Search Tree
 Morries Traversal ??
