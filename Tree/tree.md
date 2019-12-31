@@ -36,6 +36,10 @@ BST的根节点比其左子树的最大值大，比右子树的最小值小。
 #### 366. Find Leaves of Binary Tree*** -- Medium
 用HashMap保存每个节点的深度。
 
+#### 449. Serialize and Deserialize BST* -- Medium
+和297题很相似。
+C++使用sstream, Java使用StringBuilder。
+
 #### 510. Inorder Successor in BST II -- Medium
 这题好烦啊
 * 1. 若有Right，则找右子树的最小节点
