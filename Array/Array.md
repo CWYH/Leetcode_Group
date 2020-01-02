@@ -22,3 +22,6 @@ Bayor-Moore Algorithm
 [https://leetcode.com/problems/majority-element-ii/discuss/63520/Boyer-Moore-Majority-Vote-algorithm-and-my-elaboration]
 
 [https://gregable.com/2013/10/majority-vote-algorithm-find-majority.html]
+
+#### 289. Game of Life
+使用负数标记要变化的格子，可以做到$O(1)$的空间复杂度。
