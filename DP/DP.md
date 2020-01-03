@@ -66,6 +66,10 @@ $$
         dp[i][j] = min(dp[i+1][j], dp[i+1][j+1]) + triangle[i][j];
     $$
 
+### 161. One Edit Distance
+详见Array-161题
+DP在此并非最优解法，最优解法时间复杂度$O(N)$
+
 ### 174. Dungeon Game -- Medium
 ```Cpp
 dp[i][j] = min(dp[i + 1][j], dp[i][j + 1]) - dungeon[i][j];

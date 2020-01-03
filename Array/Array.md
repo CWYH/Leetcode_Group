@@ -12,6 +12,26 @@
 分别保存两个词在数组中的下标，再将第二个词的下标到第一个词的下标数组中二分查找最近的一个下标。
 
 ### Medium
+#### 161. One Edit Distance -- Medium
+一次遍历，时间复杂度$O(N)$.
+```java
+    public boolean isOneEditDistance(String s, String t) {
+        final int M = s.length();
+        final int N = t.length();
+        if (M > N) return isOneEditDistance(t, s);
+        if (N - M > 1) return false;
+        
+        for (int i = 0; i < M; i++) {
+            if (s.charAt(i) != t.charAt(i)) {
+                if (M == N) return s.substring(i + 1).equals(t.substring(i + 1));
+                else return s.substring(i).equals(t.substring(i + 1));
+            }
+        }
+        return M == N - 1;
+    }
+```
+
+
 #### 229. Majority Element II ***
 Bayor-Moore Algorithm
 两次遍历，对于最多有$k$个可能的majority element, 时间复杂度$O(kN)$, 空间复杂度$O(k)$. 对于本题，$\lfloor n/3 \rfloor$表明最多有$k=2$种majority emelent的可能.
