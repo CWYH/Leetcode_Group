@@ -31,6 +31,11 @@
     }
 ```
 
+#### 163. Missing Ranges -- Medium
+在nums中加入`lower-1`和`upper+1`.
+
+使用`long`类型，防止`Integer.MIN_VALUE`和`Integer.MAX_VALUE`的问题。
+
 
 #### 229. Majority Element II ***
 Bayor-Moore Algorithm
