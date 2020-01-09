@@ -72,6 +72,13 @@
   
   
 ### Medium
+
+#### 271. Encode and Decode Strings* -- Medium
+Serialization.
+see `protobuf`.
+
+对于每个字符串，记录下串的长度。
+
 #### 284. Peeking Iterator* -- Medium
 只用Iterator这个类，不要用其他的数据结构。
 
