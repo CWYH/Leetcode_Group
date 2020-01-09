@@ -50,3 +50,11 @@ Bayor-Moore Algorithm
 
 #### 289. Game of Life
 使用负数标记要变化的格子，可以做到$O(1)$的空间复杂度。
+
+
+### Hard
+
+#### 41. First Missing Positive*** -- Hard
+Put each number in its right place.
+For example: When we find 5, then swap it with A[4].
+At last, the first place where its number is not right, return the place + 1.
