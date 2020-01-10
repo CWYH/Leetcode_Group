@@ -32,3 +32,9 @@ String[] PFIdArr = myList.toArray(new String[myList.size()]);
 String[] s = {"a","b","c"};
 List list = java.util.Arrays.asList(s);
 ```
+
+### Medium
+
+#### 325. Maximum Size Subarray Sum Equaks k
+HashMap, key为当前前缀和，val为第一次出现该前缀和的下标。
+一次遍历，时间复杂度$O(N)$。
