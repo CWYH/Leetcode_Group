@@ -13,8 +13,14 @@ class Solution {
 		dp[nums[0]] = 1;
 		for (int n = nums[0] + 1; n <= target; n++) {
 			for (int k = 0; k < N; k++) {
-				
+				if (n == nums[k]) {
+					dp[n]++;
+				} else if (n > nums[k] && n <= nums[0] + nums[k]) {
+					dp[n] += dp[n - nums[k]];
+				}
 			}
 		}
+		
+		return dp[target];
     }
 }
