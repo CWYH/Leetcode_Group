@@ -97,6 +97,15 @@ $$
 k[i] = \min(k[t_2] * 2, \min(k[t_3] * 3, k[t_5] * 5))
 $$
 
+### 279. Perfect Squares -- Medium
+设$n$由最少$F[n]$个完全平方数组成。
+$F[1] = 1$
+状态转移方程为：
+$$
+F[n] = \min(F[n], F[n - i * i] + 1)
+$$
+其中$i^2 \le n - 1$
+
 ### 313. Super Ugly Number -- Meidum
 和264题一样，不过要注意去重
 
