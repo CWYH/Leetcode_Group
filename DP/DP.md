@@ -233,6 +233,36 @@ $$
 如果存在$n == nums[k]$ dp[n]++
 
 
+### 673. Number of Longest Increasing Subsequence*****
+#### 方法1 DP
+我们需要定义两个数组`dp`和`amount`。`dp[i]`表示以下标`i`为结尾的最长上升数组的长度，`amount[i]`表示以下标`i`为结尾的最长上升数组的个数。那么状态转移方程可以写成：
+```java
+初始化dp[i] = 1, amount[i] = 1;
+for (int j = 0; j < i - 1; j++) {
+    if (nums[j] > nums[i]) {
+        if (dp[j] + 1 > dp[i]) {
+            dp[i] = dp[j] + 1;
+            amount[i] = amount[j];
+        } else {
+            amount[i] += amount[j];
+        }
+    }
+}
+```
+计算`dp`和`amount`完成后, 遍历`dp`得到最大长度`maxLen`, 所有长度为`maxLen`对应的`amount`之和即为结果：
+```java
+int res = 0;
+for (int i = 0; i < N; i++) {
+    if (dp[i] == maxLen) {
+        res += amount[i];
+    }
+}
+```
+
+#### 方法2 线段树
+详见 [https://leetcode-cn.com/problems/number-of-longest-increasing-subsequence/solution/zui-chang-di-zeng-zi-xu-lie-de-ge-shu-by-leetcode/]
+
+
 ## Hard
 ### 85. Maximal Rectangle -- Hard
 一层一层遍历
