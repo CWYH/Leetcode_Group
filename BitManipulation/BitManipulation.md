@@ -1,6 +1,28 @@
 # Bit Manipulation 神奇的位运算
 ## Leetcode
 ### Easy
+
+#### 405. Convert a Number to Hexadecimal*****
+```
+Basic idea: each time we take a look at the last four digits of
+            binary verion of the input, and maps that to a hex char
+            shift the input to the right by 4 bits, do it again
+            until input becomes 0.
+```
+
+```java
+public String toHex(int num) {
+    if (num == 0) return "0";
+    char[] hex = "0123456789abcdef".toCharArray();
+    StringBuilder sb = new StringBuilder();
+    while (num != 0) {
+        sb.insert(0, hex[(num & 15)]);   // 末尾四位数，注意到负数本身就是用2的补码表示的，因此不需要做特殊处理
+        num >>>= 4;     // 无符号右移
+    }
+    return sb.toString();
+}
+```
+
 #### 389. Find the Difference
 使用异或。
 ```java
