@@ -1,4 +1,10 @@
-# Two Pointers 双指针法
+# Two Pointers and Sliding Window 双指针法和滑动窗法
+
+## 经典滑动窗
+两个指针维护一个窗口：`left`, `right`
+* 窗口扩张：`left`不变，`right++;`
+* 窗口平移：`left++; right++;`
+
 
 ## Leetcode
 
@@ -39,6 +45,9 @@ class Solution {
     }
 }
 ```
+
+#### 424. Longest Repeating Character Replacement***** -- Medium
+
 
 
 ### Hard
