@@ -48,6 +48,9 @@ class Solution {
 
 #### 424. Longest Repeating Character Replacement***** -- Medium
 
+#### 487. Max Consecutive Ones II -- Medium
+双指针，保留上一个0出现的位置。
+
 
 
 ### Hard
