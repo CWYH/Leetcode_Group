@@ -8,6 +8,8 @@ import java.util.List;
 
 /**
  * 763. Partition Labels -- Medium
+ * 
+ * 类似于56. Merge Intervals
  */
 
 class Solution {
