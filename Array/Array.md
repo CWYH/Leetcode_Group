@@ -51,6 +51,10 @@ Bayor-Moore Algorithm
 #### 289. Game of Life
 使用负数标记要变化的格子，可以做到$O(1)$的空间复杂度。
 
+#### 442. Find All Duplicates in an Array -- Medium
+* 1. 交换法
+* 2. 绝顶聪明的算法，不消耗额外空间，巧妙自行“哈希”
+[https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/solution/c-qiao-miao-zi-xing-ha-xi-by-hou-yong-sheng/]
 
 ### Hard
 
