@@ -82,6 +82,11 @@ see `protobuf`.
 #### 284. Peeking Iterator* -- Medium
 只用Iterator这个类，不要用其他的数据结构。
 
+#### 348. Design Tic-Tac-Toe -- Medium
+只保存行/列/对角线的和，而不用保存所有元素。
+空间复杂度$O(N)$。
+每次`move`， 时间复杂度$O(1)$。
+
 #### 355. Design Twitter******* -- Medium
 OOP + k个排序链表合并问题
 https://leetcode-cn.com/problems/design-twitter/solution/mian-xiang-dui-xiang-she-ji-he-bing-k-ge-you-xu-li/
