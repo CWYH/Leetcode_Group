@@ -1,23 +1,8 @@
-# 博弈论与游戏
+/**
+ * 375. Guess Number Higher or Lower II -- Meidum
+ */
 
-## Leetcode
-
-### Medium
-#### 294. Flip Game II ***** -- Medium
-* 方法1：回溯法，注意一维数组的clone是深拷贝
-* 方法2：Sprague-Grundy定理
-
-#### 375. Guess Number Higher or Lower II ******* -- Meidum
-动态规划
-
-```
-dp[i][j] = min(k + max(dp[i][k - 1], dp[k + 1][j])) for k in (i, j)
-```
-
-注意动态规划的实现方式。
-`dp[i][k-1]`和`dp[k + 1][j]`需要在`dp[i][j]`之前计算，因此最外层循环遍历区间长度更好。
-
-```java
+class Solution {
     public int getMoneyAmount(int n) {
         if (n <= 1) return 0;
         int[][] dp = new int[n + 1][n + 1];
@@ -32,4 +17,10 @@ dp[i][j] = min(k + max(dp[i][k - 1], dp[k + 1][j])) for k in (i, j)
         }
         return dp[1][n];
     }
-```
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        int n = 3;
+        System.out.println(s.getMoneyAmount(n));
+    }
+}
