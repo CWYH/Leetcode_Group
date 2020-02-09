@@ -33,3 +33,10 @@ dp[i][j] = min(k + max(dp[i][k - 1], dp[k + 1][j])) for k in (i, j)
         return dp[1][n];
     }
 ```
+
+#### 464. Can I Win***** -- Medium 
+自顶向下， DFS。
+
+使用HashMap保存中间状态，减少重复计算。
+
+使用bit来保存当前使用过得数字。
