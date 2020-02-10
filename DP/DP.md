@@ -253,11 +253,43 @@ $$
     }
 ```
 
+
 ### 377. Combination Sum IV
 $$
 dp[n] = dp[n - nums[0]] + dp[n - nums[1]] + \cdots
 $$
 如果存在$n == nums[k]$ dp[n]++
+
+
+### 486. Predict the Winner*** -- Medium
+方法一： 自顶向下DFS，时间复杂度$O(2^N)$。
+
+方法二： DP
+设`dp[i][j]`表示当剩下的数为`nums[i...j]`时，当前操作的选手（注意，不一定是先手）与另一位选手最多的分数差。状态转移方程为：
+```
+dp[i][j] = max(nums[i] - dp[i + 1][j], nums[j] - dp[i][j - 1])
+dp[i][i] = nums[i]
+```
+如果`dp[0][N-1] >= 0` 先手必胜。
+
+```java
+    public boolean PredictTheWinner(int[] nums) {
+        if (nums.length <= 2) return true;
+        final int N = nums.length;
+        int[][] dp = new int[N][N];
+        for (int i = N - 1; i >= 0; i--) {
+            dp[i][i] = nums[i];
+            for (int j = i + 1; j < N; j++) {
+                dp[i][j] = Math.max(nums[i] - dp[i + 1][j], nums[j] - dp[i][j - 1]);
+            }
+        }
+        return dp[0][N - 1] >= 0;
+    }
+```
+
+
+
+
 
 
 ### 673. Number of Longest Increasing Subsequence*****
