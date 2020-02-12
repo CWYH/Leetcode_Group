@@ -56,6 +56,18 @@ C++使用sstream, Java使用StringBuilder。
 #### 450. Delete Node in BST -- Medium
 删除节点，一次性写对感觉还蛮难的。
 
+#### 1245. Tree Diameter***** -- Medium
+方法1：类似题124.
+DFS，以任意一点为root，与其关联的点为子节点，求出所有子节点对应的路径的前两大值max1,max2，则该点对应的最长路径为max1+max2。
+
+方法2：两次搜索
+一般求解树的直径的问题，最简单高效的方法是先从任意一个点出发进行搜索，直到走到一个最远的点，我们可以证明这个点一定是直径的一个端点，然后再从这个点为起点进行搜索，直到到达从该点出发到达的最远的点，其经过的路径一定是树的直径。
+
+作者：SHU_YKC
+链接：https://leetcode-cn.com/problems/tree-diameter/solution/liang-ci-sou-suo-fang-fa-yi-dong-gan-diao-100-by-s/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 ### Hard 
 #### 99. Recover Binary Search Tree
 Morries Traversal ??
