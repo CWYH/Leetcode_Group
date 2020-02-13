@@ -38,3 +38,6 @@ List list = java.util.Arrays.asList(s);
 #### 325. Maximum Size Subarray Sum Equaks k
 HashMap, key为当前前缀和，val为第一次出现该前缀和的下标。
 一次遍历，时间复杂度$O(N)$。
+
+#### 560. Subarray Sum Equals K***** -- Medium
+遍历时用Hash表存储 和S[i]出现的次数

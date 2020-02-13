@@ -90,3 +90,7 @@ see `protobuf`.
 #### 355. Design Twitter******* -- Medium
 OOP + k个排序链表合并问题
 https://leetcode-cn.com/problems/design-twitter/solution/mian-xiang-dui-xiang-she-ji-he-bing-k-ge-you-xu-li/
+
+
+#### 384. Shuffle an Array -- Medium
+Fisher-Yates 洗牌算法 
