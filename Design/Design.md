@@ -88,6 +88,9 @@ Easy
 #### 284. Peeking Iterator* -- Medium
 只用Iterator这个类，不要用其他的数据结构。
 
+#### 288. 288. Unique Word Abbreviation -- Medium
+傻逼问题
+
 #### 348. Design Tic-Tac-Toe -- Medium
 只保存行/列/对角线的和，而不用保存所有元素。
 空间复杂度$O(N)$。
