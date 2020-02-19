@@ -96,6 +96,9 @@ Easy
 空间复杂度$O(N)$。
 每次`move`， 时间复杂度$O(1)$。
 
+#### 353. Design Snake Game -- Medium
+判断的关键点在于，先移除蛇的尾部，再判断蛇头会不会撞到
+
 #### 355. Design Twitter******* -- Medium
 OOP + k个排序链表合并问题
 https://leetcode-cn.com/problems/design-twitter/solution/mian-xiang-dui-xiang-she-ji-he-bing-k-ge-you-xu-li/
