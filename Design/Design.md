@@ -103,6 +103,12 @@ Easy
 OOP + k个排序链表合并问题
 https://leetcode-cn.com/problems/design-twitter/solution/mian-xiang-dui-xiang-she-ji-he-bing-k-ge-you-xu-li/
 
+#### 380. Insert Delete GetRandom O(1) * -- Medium
+线性表`ArrayList` + 哈希表
+
+注意：删除任意索引元素需要时间$O(1)$，这里的解决方案是总是删除最后一个元素。
+* 将要删除元素和最后一个元素交换。
+* 将最后一个元素删除。
 
 #### 384. Shuffle an Array -- Medium
 Fisher-Yates 洗牌算法 
