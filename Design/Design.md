@@ -110,5 +110,10 @@ https://leetcode-cn.com/problems/design-twitter/solution/mian-xiang-dui-xiang-sh
 * 将要删除元素和最后一个元素交换。
 * 将最后一个元素删除。
 
+#### 381. Insert Delete GetRandom O(1) - Duplicates allowed *** -- Hard
+同380.
+
+注意删除操作。list的最后一个数为val则直接删除最后一个数。
+
 #### 384. Shuffle an Array -- Medium
 Fisher-Yates 洗牌算法 
