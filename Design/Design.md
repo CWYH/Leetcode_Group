@@ -117,3 +117,22 @@ https://leetcode-cn.com/problems/design-twitter/solution/mian-xiang-dui-xiang-sh
 
 #### 384. Shuffle an Array -- Medium
 Fisher-Yates 洗牌算法 
+
+
+### Hard
+
+#### 432. All O`one Data Structure ***** -- Hard
+双向链表 + 两个Hash表
+```java
+    private class Node {
+        int val;
+        HashSet<String> keys;
+        Node pre;
+        Node next;
+	}
+	
+    private HashMap<String, Node> keyMap;   // key -> Node
+    private HashMap<Integer, Node> valMap;  // val -> Node
+```
+
+注意`inc`实现时，当当前链表中没有对应`key`时，检查当前链表是否有`val`为1的节点，有则直接在该节点上添加`key`，没有再插入新的节点。
