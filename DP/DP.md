@@ -109,6 +109,10 @@ $$
 ### 313. Super Ugly Number -- Meidum
 和264题一样，不过要注意去重
 
+
+#### 351. Android Unlock Patterns *** -- Medium
+这哪里是DP啊，暴力回溯法
+
 ### 368. Largest Divisible Subset***** -- Medium
 对于已排好序的nums, 设两个数组：
 `dp[i]`: 以nums[i]为结尾的序列最大长度；
@@ -338,6 +342,8 @@ for (int i = 0; i < N; i++) {
 
 #### 方法2 线段树
 详见 [https://leetcode-cn.com/problems/number-of-longest-increasing-subsequence/solution/zui-chang-di-zeng-zi-xu-lie-de-ge-shu-by-leetcode/]
+
+
 
 
 ## Hard
