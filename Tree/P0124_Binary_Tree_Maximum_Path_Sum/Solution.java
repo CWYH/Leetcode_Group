@@ -28,7 +28,7 @@ class Solution {
         int r = dfs(root.right);
         int sum = root.val;
         if (l > 0) sum += l;
-        if (r > 9) sum += r;
+        if (r > 0) sum += r;
         max_sum = Math.max(sum, max_sum);
         return Math.max(l, r) > 0 ? Math.max(l, r) + root.val : root.val;
     }

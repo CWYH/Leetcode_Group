@@ -54,6 +54,9 @@ class Solution {
 #### 487. Max Consecutive Ones II -- Medium
 双指针，保留上一个0出现的位置。
 
+#### 340. Longest Substring with At Most K Distinct Characters -- Medium
+双指针 + HashMap
+
 
 
 ### Hard

@@ -12,3 +12,7 @@
 2. 使用锁
 
 ## 1117. Building H2O -- Medium
+
+## 1188. Design Bounded Blocking Queue * -- Medium
+
+## 1195. Fizz Buzz Multithreaded *** -- Medium
